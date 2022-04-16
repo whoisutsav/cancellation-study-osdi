@@ -81,11 +81,11 @@ LGTM integrates with github, so many popular open-source applications will be au
 
 2. Click the search icon at the top of the page and search for your project (searching here for "apache maven"). Click "view project"
 
-![img](search-app.jpg)
+![img](img/search-app.jpg)
 
 3. On the project page, click "Query this project"
 
-![img](navigate-to-console.jpg)
+![img](img/navigate-to-console.jpg)
 
 4. Copy and paste the query from the relevant file into the console. After the query compiles click "Run"
 
