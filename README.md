@@ -42,7 +42,7 @@ Users can also query against other apps. Instructions are provided below.
 
 ![img](img/rerun-query.jpg)
 
-Antipattern 1 - Unhandled IE in loop (Java): [query](https://lgtm.com/query/6993141721663402382/)
+Antipattern 1 - Unhandled IE in loop (Java): [query](https://lgtm.com/query/4502635833131002770/)
 
 Antipattern 2 - API misuse (Java): [query](https://lgtm.com/query/6993141721663402382/)
 
