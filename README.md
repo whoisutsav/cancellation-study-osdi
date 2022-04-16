@@ -52,7 +52,7 @@ Antipattern 4b - Ignored tokens (CodeRush simulated resul, C#t): [query](https:/
 
 Antipattern 5 - Tokens not passed (C#): [query](https://lgtm.com/query/2497434787279115793/)
 
-The number of antipatterns found for each app are used to populate Table 7.
+The number of antipatterns found for each app are clearly marked, and should match "latest" in `AntiPatternsUnpdated.xlsx`
 
 #### Reproduction via command line (SOLR only)
 
@@ -66,7 +66,7 @@ docker run -it --rm whoisutsav/codeql-solr
 cd /usr/local/codeql_scripts
 ./repro_solr_results.sh
 ```
-
+The query results will print to the screen, and the number of rows should match "latest" in `AntiPatternsUnpdated.xlsx`
 
 #### Issuing a query against a different app
 The queries we provided can be used against different apps.
