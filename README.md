@@ -63,7 +63,7 @@ We have packaged the command line tool and scripts into a docker container (requ
 To run:
 ```
 docker run -it --rm whoisutsav/codeql-solr
-cd /usr/local/codeql_scripts
+cd /usr/local/repro-scripts
 ./repro_solr_results.sh
 ```
 The query results will print to the screen, and the number of rows should match "latest" in `AntiPatternsUnpdated.xlsx`
