@@ -2,7 +2,7 @@ import csharp
 
 class TokenAcceptingMethod extends Method {
 	TokenAcceptingMethod() {
-      this.getAParameter().getType().toString().matches("%CancellationToken%") 
+      this.getAParameter().getType().getQualifiedName().matches("%System.Threading.CancellationToken%") 
       and this.hasStatementBody()
     }
 }
@@ -12,7 +12,7 @@ predicate isTestElement(Element e) {
 }
 
 predicate callWithToken(Call c) {
-	c.getAnArgument().getType().toString().matches("CancellationToken")
+	c.getAnArgument().getType().hasQualifiedName("System.Threading.CancellationToken")
 }
 
 predicate canSupportToken(Call c) {

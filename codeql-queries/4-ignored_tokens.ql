@@ -2,7 +2,7 @@ import csharp
 
 class TokenAcceptingMethod extends Method {
 	TokenAcceptingMethod() {
-      this.getAParameter().getType().toString().matches("%CancellationToken%") 
+      this.getAParameter().getType().hasQualifiedName("System.Threading.CancellationToken") 
       and this.hasStatementBody()
     }
 }
@@ -13,12 +13,12 @@ predicate isTestOrDebugMethod(Method m) {
 }
 
 predicate checksToken(Expr e) {
-     e.(PropertyAccess).getProperty().getName().toString().matches("IsCancellationRequested") or
-     e.(MethodCall).getTarget().getName().toString().matches("%ThrowIfCancellationRequested%")
+     e.(PropertyAccess).getProperty().hasQualifiedName("System.Threading.IsCancellationRequested") or
+     e.(MethodCall).getTarget().hasQualifiedName("System.Threading.CancellationToken.ThrowIfCancellationRequested")
 }
 
 predicate passesToken(Call c) {
-	c.getAnArgument().getType().toString().matches("CancellationToken")
+	c.getAnArgument().getType().hasQualifiedName("System.Threading.CancellationToken")
 }
 
 predicate containsLoopWithoutTokenCheck(Method m) {
@@ -32,6 +32,4 @@ from TokenAcceptingMethod tm
 where not isTestOrDebugMethod(tm)
 and containsLoopWithoutTokenCheck(tm)
 select tm
-
-
 
