@@ -63,7 +63,7 @@ We have packaged the command line tool and scripts into a docker container (requ
 
 To run:
 ```
-docker run -it --rm usethi/codeql-container-solr
+docker run -it --rm whoisutsav/codeql-solr
 cd /usr/local/codeql_scripts
 ./repro_solr_results.sh
 ```
