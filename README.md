@@ -36,8 +36,6 @@ We provide the queries from the paper in the codeql-queries/ directory of this r
 
 As a shortcut to reproduce results, we have included links to our previous query runs here. To re-run a query at a link provided, the user can trigger a "dummy" recompilation (by entering a new line at the end of the query) and then clicking the "Run" button.
 
-Users can also query against other apps. Instructions are provided below.
-
 ![img](img/trigger-recompilation.jpg)
 
 ![img](img/rerun-query.jpg)
@@ -54,6 +52,7 @@ Antipattern 4b - Ignored tokens (CodeRush simulated resul, C#t): [query](https:/
 
 Antipattern 5 - Tokens not passed (C#): [query](https://lgtm.com/query/2497434787279115793/)
 
+The number of antipatterns found for each app are used to populate Table 7.
 
 #### Reproduction via command line (SOLR only)
 
